@@ -1,0 +1,56 @@
+buildscript {
+    ext {
+        springBootVersion = '1.2.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
+        classpath("io.spring.gradle:dependency-management-plugin:0.5.1.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot' 
+apply plugin: 'io.spring.dependency-management' 
+apply plugin: 'war'
+
+
+war {
+    baseName = 'fooddebug'
+    version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    providedRuntime
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:1.2.4.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-security:1.2.4.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf:1.2.4.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-web:1.2.4.RELEASE")
+    compile("org.codehaus.jackson:jackson-mapper-asl:1.9.13")
+    compile("org.easytesting:fest-assert:1.4")
+    compile("javax.inject:javax.inject:1")
+    compile("com.google.guava:guava:18.0")
+    compile("org.springframework.data:spring-data-mongodb:1.7.1.RELEASE")
+    compile("org.thymeleaf.extras:thymeleaf-extras-springsecurity3:2.1.2.RELEASE")
+    compile("org.thymeleaf.extras:thymeleaf-extras-tiles2-spring4:2.1.1.RELEASE")
+    runtime("org.hsqldb:hsqldb")
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat:1.2.4.RELEASE")
+    testCompile("org.springframework.boot:spring-boot-starter-test:1.2.4.RELEASE")
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}

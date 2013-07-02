@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="page-sidebar-wrapper"  th:fragment="siderbar">
+    <!-- BEGIN HORIZONTAL RESPONSIVE MENU -->
+    <div class="page-sidebar navbar-collapse collapse">
+        <ul class="page-sidebar-menu" data-slide-speed="200" data-auto-scroll="true">
+            <li  class="classic-menu-dropdown" th:classappend="${page == 'homes' ? 'active' : ''}"><a href="#" th:href="@{/}">首页<span class="selected"></span></a></li>
+            <li class="classic-menu-dropdown" th:classappend="${page == 'food' ? 'active' : ''}"><a href="#" th:href="@{/nutritionCalculate}">营养计算<span class="selected"></span></a></li>
+            <li class="classic-menu-dropdown" th:classappend="${page == 'foods' ? 'active' : ''}"><a href="#" th:href="@{/foods}">配餐管理</a><span class="selected"></span></li>
+            <li class="classic-menu-dropdown" th:classappend="${page == 'messageBoard' ? 'active' : ''}"><a href="#" th:href="@{/messageBoard}">留言板</a><span class="selected"></span></li>
+            <li class="classic-menu-dropdown" th:classappend="${page == 'home' ? 'active' : ''}"><a href="#" th:href="@{/about}">关于我们</a><span class="selected"></span></li>
+        </ul>
+    </div>
+    <!-- END HORIZONTAL RESPONSIVE MENU -->
+</div>
+</body>
+</html>

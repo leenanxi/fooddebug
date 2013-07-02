@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>首页 - Food Debug</title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../assets/home/resources/commerce-min.css" th:href="@{/assets/home/resources/commerce-min.css}"/>
+    <link rel="stylesheet" type="text/css" href="../../../assets/home/resources/site.css" th:href="@{/assets/home/resources/site.css}" />
+    <script type="text/javascript" src="../../../assets/home/resources/ga.js" th:src="@{/assets/home/resources/ga.js}"></script>
+    <script type="text/javascript" src="../../../assets/home/resources/common-min.js" th:src="@{/assets/home/resources/common-min.js}"></script>
+    <script type="text/javascript" src="../../../assets/home/resources/commerce-min.js" th:src="@{/assets/home/resources/commerce-min.js}"></script>
+    <script type="text/javascript" src="../../../assets/home/resources/homepage.js" th:src="@{/assets/home/resources/homepage.js}"></script>
+</head>
+<body class="collection-type-page homepage view-list mobile-style-available collection-5334024ce4b0d7651252c2a1 collection-layout-default transparent-header enable-nav-button nav-button-style-outline nav-button-corner-style-pill banner-button-style-solid banner-button-corner-style-pill banner-slideshow-controls-arrows meta-priority-date hide-entry-author    hide-blog-sidebar   hide-list-entry-footer center-navigation--info  gallery-design-grid aspect-ratio-auto lightbox-style-light gallery-navigation-bullets gallery-info-overlay-show-on-hover gallery-aspect-ratio-32-standard gallery-arrow-style-no-background gallery-transitions-fade gallery-show-arrows gallery-auto-crop   product-list-titles-under product-list-alignment-center product-item-size-11-square product-image-auto-crop product-gallery-size-11-square  show-product-price show-product-item-nav product-social-sharing   event-thumbnails event-thumbnail-size-32-standard event-date-label event-date-label-time event-excerpts event-list-date event-list-time event-list-address event-icalgcal-links      opentable-style-light newsletter-style-light small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square button-style-solid button-corner-style-pill native-currency-code-usd has-banner-image general-page">
+
+<input type="checkbox" name="mobile-nav-toggle" id="mobileNavToggle" class="mobile-nav-toggle-box hidden" />
+<a href="#" class="body-overlay"></a>
+<div id="sidecarNav">
+    <div id="mobileNavWrapper" class="nav-wrapper">
+        <nav id="mobileNavigation">
+            <div class="collection active homepage"><a href="/index"> 主页 </a>
+            </div>
+            <div class="collection"><a href="/messageBoard"> 留言板 </a>
+            </div>
+            <div class="collection" th:if="${#authorization.expression('!isAuthenticated()')}"><a href="/signin" th:href="@{/signin}"> 登录</a></div>
+            <div class="collection" th:if="${#authorization.expression('isAuthenticated()')}"><a href="/logout" th:href="@{/logout}"> 注销</a></div>
+        </nav>
+    </div>
+</div>
+<div id="siteWrapper" class="clearfix">
+<header id="header" class="show-on-scroll" data-offset-el=".index-section" data-offset-behavior="bottom" role="banner">
+    <div class="header-inner">
+        <div id="siteTitleWrapper" class="wrapper" data-content-field="site-title">
+            <h1 id="siteTitle" class="site-title"><a href="#">The Food <br/>Debug</a></h1>
+        </div>
+        <label for="mobileNavToggle" class="mobile-nav-toggle-label">
+            <div class="top-bar"></div>
+            <div class="middle-bar"></div>
+            <div class="bottom-bar"></div>
+        </label>
+        <label for="mobileNavToggle" class="mobile-nav-toggle-label fixed-nav-toggle-label">
+            <div class="top-bar"></div>
+            <div class="middle-bar"></div>
+            <div class="bottom-bar"></div>
+        </label>
+
+        <div id="headerNav">
+            <div id="mainNavWrapper" class="nav-wrapper">
+                <nav id="mainNavigation">
+                    <div class="collection active homepage"><a href="/index"> 主页 </a>
+                    </div>
+                    <div class="collection"><a href="/messageBoard"> 留言板 </a>
+                    </div>
+                    <div class="collection" th:if="${#authorization.expression('!isAuthenticated()')}"><a href="/signin" th:href="@{/signin}"> 登录</a></div>
+                    <div class="collection" th:if="${#authorization.expression('isAuthenticated()')}"><a href="/logout" th:href="@{/logout}"> 注销</a></div>
+
+                </nav>
+            </div>
+            <!-- 手机浏览 -->
+            <style>
+                .mobile-nav-toggle-label {
+                    display: inline-block !important;
+                }
+            </style>
+        </div>
+    </div>
+</header>
+<div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+<div class="banner-thumbnail-wrapper has-description" data-content-field="page-settings" id="yui_3_10_1_1_1399728765542_719">
+    <div class="color-overlay"></div>
+    <figure id="thumbnail" class="loading content-fill" style="overflow: hidden;">
+        <img data-image-dimensions="1200x899" data-image-focal-point="0.5,0.5" alt="WholePantry_Website_web.jpg" class="" src="../../../assets/home/resources/WholePantry_Website_web.jpg" data-image-resolution="1500w" style="top: -241px; left: 0px; width: 1519px; height: 1138px; position: relative;" />
+    </figure>
+    <div class="desc-wrapper">
+        <p>Your Whole Life</p>
+
+        <p id="yui_3_10_1_1_1399728765542_702">
+            <strong data-shrink-original-spacing="4" data-shrink-original-size="68" class="data-shrink-ready" style="letter-spacing: 4px;">
+                Starts with you</strong>
+        </p>
+
+        <p><a href="/nutritionCalculate"> 营养计算 </a>
+            &nbsp; &nbsp; &nbsp;
+            <a href="/foods"> 配餐管理 </a>
+        </p>
+    </div>
+</div>
+<main id="page" role="main">
+    <div id="content" class="main-content">
+        <div class="sqs-layout sqs-grid-12 columns-12" data-layout-title="Home" data-type="page">
+            <div class="row sqs-row" id="yui_3_10_1_1_1399728765542_176">
+                <div class="col sqs-col-12 span-12" id="yui_3_10_1_1_1399728765542_175">
+                    <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-null">
+                        <div class="sqs-block-content">
+                            <h1 class="text-align-center">Create your whole life. Use the Food Debug today.</h1>
+
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="row sqs-row" id="yui_3_10_1_1_1399728765542_1638">
+                        <div class="col sqs-col-2 span-2">
+                            <div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21">
+                                <div class="sqs-block-content">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col sqs-col-8 span-8" id="yui_3_10_1_1_1399728765542_1637">
+                            <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-9b68428d3dc4235f06c2">
+                                <div class="sqs-block-content">
+                                    <h3 class="text-align-center"><span>Here at FoodDebug we believe in living your whole life, so we created the world’s first health, wellness and lifestyle app with a vision to restore the balance and empower The Food Debug Community to live their whole life. The Food Debug is the new go-to place, filled with a continually updating library of resources, empowering information, lifestyle guides and simple, yet beautiful nourishing recipes.</span>
+                                    </h3>
+
+                                    <p class="text-align-center">&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="sqs-block form-block sqs-block-form" data-block-type="9" id="block-0727e56169ec23858cb2">
+                                <div class="sqs-block-content" id="yui_3_10_1_1_1399728765542_1636">
+                                    <div class="form-wrapper" id="yui_3_10_1_1_1399728765542_1635">
+                                        <div class="form-inner-wrapper" id="yui_3_10_1_1_1399728765542_1634">
+                                            <form autocomplete="on" action="#" method="POST">
+                                                <div class="field-list clear" id="yui_3_10_1_1_1399728765542_1632">
+                                                    <div id="email-yui_3_10_1_1_1395979161078_21637" class="form-item field email required">
+                                                        <label class="title" for="email-yui-field"> <span class="required">*</span>
+                                                        </label>
+                                                        <input class="field-element" name="email" x-autocompletetype="email" id="email-yui-field" type="text" spellcheck="false" placeholder="如果你对我们感兴趣,请留下你的Email." />
+                                                    </div>
+                                                </div>
+                                                <input class="button sqs-system-button sqs-editable-button" type="submit" value="提交邮箱" />
+
+                                                <div class="hidden form-submission-text">
+                                                    <p>Thank you! Welcome to the community.&nbsp;Please click 'confirm' on the email we've just sent you and don't forget to contact us</p>
+                                                </div>
+                                                <div class="hidden form-submission-html" data-submission-html=""></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-02690fee37b773f10b28">
+                                <div class="sqs-block-content">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col sqs-col-2 span-2">
+                            <div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-ee21fe402d941b112f04">
+                                <div class="sqs-block-content">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sqs-block gallery-block sqs-block-gallery">
+                        <div class="sqs-block-content sqs-intrinsic" style="padding-bottom: 43.43283582089552%;">
+                            <div class="sqs-gallery-container  sqs-gallery-block-slider  sqs-gallery-has-controls    sqs-gallery-block-show-meta sqs-gallery-block-meta-position-bottom clear sqs-intrinsic-content">
+                                <div class="sqs-gallery sqs-gallery-design-strip" id="yui_3_10_1_1_1399728765542_142">
+                                    <div class="sqs-wrapper" style="left: -302px; width: 13692px;">
+                                        <img src="../../../assets/home/resources/ButternutHashBakedEggsAppleCaramelizedOnion.jpg" data-image-resolution="500w" style="" />
+                                        <img data-load="false" alt="MuesliBars.jpg" src="../../../assets/home/resources/MuesliBars.jpg" data-image-resolution="500w" style="" />
+                                        <img data-load="false" data-type="image" class="sqs-gallery-design-strip-slide loaded sqs-active-slide" alt="ChocolateChaiFrappe_A.jpg" src="../../../assets/home/resources/ChocolateChaiFrappe_A.jpg" style="" />
+                                        <img data-image-dimensions="400x533" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" src="../../../assets/home/resources/ChocolateFudgeTarts_B.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="600x800" class="sqs-gallery-design-strip-slide loaded" alt="ExpressChocolateMousse_A.jpg" src="../../../assets/home/resources/ExpressChocolateMousse_A.jpg" data-image-resolution="500w" style="" />
+                                        <img data-load="false" data-image-dimensions="800x1067" class="sqs-gallery-design-strip-slide loaded" src="../../../assets/home/resources/KaleChips_B.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="600x800" data-image-focal-point="0.5,0.5" data-type="image" class="sqs-gallery-design-strip-slide loaded" alt="CaramelMacadamiaCheeseCake_A.jpg" src="../../../assets/home/resources/CaramelMacadamiaCheeseCake_A.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="600x800" data-image-focal-point="0.5,0.5" class="sqs-gallery-design-strip-slide loaded" alt="NutButter.jpg" src="../../../assets/home/resources/NutButter.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="800x1067" data-image-focal-point="0.0,0.0" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" alt="QuinoaPorridgeMacadamias_A.jpg" src="../../../assets/home/resources/QuinoaPorridgeMacadamias_A.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="2048x2734" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" src="../../../assets/home/resources/vegetablelasagnab.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="2048x2734" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" src="../../../assets/home/resources/RawNachos_A.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="2048x2734" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" alt="greensavacadowalnutsalad.jpg" src="../../../assets/home/resources/greensavacadowalnutsalad.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="2048x2734" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" alt="RoastedGrapeTomatoPizzThymeRicotta_C.jpg" src="../../../assets/home/resources/RoastedGrapeTomatoPizzThymeRicotta_C.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="5000x6674" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" alt="HazelnutSpread.jpg" src="../../../assets/home/resources/HazelnutSpread.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="600x800" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" alt="pearcheeseterrinec.jpg" src="../../../assets/home/resources/pearcheeseterrinec.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="2048x2734" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" alt="HoneyPumpkinEnokiCucumberPastaSalad_C.jpg" src="../../../assets/home/resources/HoneyPumpkinEnokiCucumberPastaSalad_C.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="2048x2734" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" alt="HoneyPumpkinEnokiCucumberPastaSalad_A.jpg" src="../../../assets/home/resources/HoneyPumpkinEnokiCucumberPastaSalad_A.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="600x800" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" alt="ApplePecanSaladRoastBeets_A.jpg" src="../../../assets/home/resources/ApplePecanSaladRoastBeets_A.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="2048x2734" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" src="../../../assets/home/resources/SupergreensPesto_B.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="600x800" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" alt="3TeaBerrySmoothie.jpg" src="../../../assets/home/resources/3TeaBerrySmoothie.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="600x800" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" alt="WhippedCoconutCream_C.jpg" src="../../../assets/home/resources/WhippedCoconutCream_C.jpg" data-image-resolution="500w" />
+                                        <img data-load="false" data-image-dimensions="600x800" data-image-focal-point="0.5,0.5" data-click-through-url="" data-type="image" class="sqs-gallery-design-strip-slide loaded" src="../../../assets/home/resources/WhippedCoconutCream_DD.jpg" data-image-resolution="500w" />
+                                    </div>
+                                </div>
+                                <div class="sqs-gallery-meta-container">
+                                    <div class="sqs-gallery-controls">
+                                        <a href="#" class="previous"></a>
+                                        <a href="#" class="next"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sqs-block spacer-block sqs-block-spacer" data-aspect-ratio="4.17910447761194" data-block-type="21" id="block-7a56501d246aa7e7f24d">
+                        <div class="sqs-block-content sqs-intrinsic">&nbsp;</div>
+                    </div>
+                    <div class="row sqs-row">
+                        <div class="col sqs-col-6 span-6">
+                            <div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-7d440bcb594646bbbf68">
+                                <div class="sqs-block-content">
+                                    <div class="image-block-outer-wrapper layout-caption-below ">
+                                        <div class="intrinsic" style="max-width:1280.0px;">
+                                            <a href="#">
+                                                <div style="padding-bottom:56.171875%;" class="image-block-wrapper has-aspect-ratio" data-description="">
+                                                    <img class="thumb-image loaded" data-image-dimensions="1280x719" data-image-focal-point="0.5,0.5" data-load="false"   alt="Transient" src="../../../assets/home/resources/inspiring_recipes.jpg" data-image-resolution="750w" style="top: 0%; left: -0.009201741391848373%; width: 100.0184034827837%; height: 100%; position: absolute;" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col sqs-col-6 span-6">
+                            <div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-9ec381a7a1a117fb9bf8">
+                                <div class="sqs-block-content">
+                                    <div class="image-block-outer-wrapper layout-caption-below ">
+                                        <div class="intrinsic" style="max-width:1280.0px;">
+                                            <a href="#">
+                                                <div style="padding-bottom:56.25%;" class="image-block-wrapper has-aspect-ratio" data-description="">
+                                                    <img class="thumb-image loaded" data-image-dimensions="1280x720" data-image-focal-point="0.5,0.5" data-load="false" src="../../../assets/home/resources/tumblr_mn8b8sLRb61rkz363o1_1280.jpg" data-image-resolution="750w" style="top: -0.060328185328181405%; left: 0%; width: 100%; height: 100.12065637065636%; position: absolute;" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row sqs-row">
+                        <div class="col sqs-col-6 span-6">
+                            <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-24be46477b8e1e6d0e9e">
+                                <div class="sqs-block-content">
+                                    <h2 class="text-align-center">Inspiring Recipes</h2>
+
+                                    <p class="text-align-center">
+                                        <span>是否我们习惯了孤独, 习惯了过去就过去吧, 是否我们迷失在内心的黑暗已久, 看不到亮光, 前方终会有出口和希望, 你知道我们迷失在人生路上, 快来拯救我们, 在人生脱轨之前, 为何我们过得如此乏味, 我们如何才能活的精彩, 我们如何才能摆脱束缚, 我们如何才能回归本性, 我们如何才能释放心灵. 请相信我, 不要循规蹈矩, 有我们陪伴, 我们将有机会破茧重生. </span>
+                                    </p>
+
+                                    <p class="text-align-center">
+                                        <a href="#">了解更多&nbsp;</a>
+                                        <a href="#">→</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col sqs-col-6 span-6">
+                            <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-701d3c3b3cc7ba704561">
+                                <div class="sqs-block-content">
+                                    <h2 class="text-align-center">Lifestyle Guides &amp; Inspiration</h2>
+
+                                    <p class="text-align-center">
+                                        <span>无径之林, 常有情趣, 无人之岸, 几多惊喜, 岸畔涯间, 鼓涛为乐, 无人驻足, 是为桃源, 吾爱世人, 自然甚之. <br/>
+                                        那些充满激励, 梦寐以求的资源, 常在自然之中, 我们采用回归基本的方法来调营养, 让我们药物, 健身, 心里获得更好的平衡..&nbsp;</span>
+                                        <br/>
+                                        <span>让我们共同为鼓舞人心的创新者们致敬.</span>
+                                    </p>
+
+                                    <p class="text-align-center">
+                                        <a style="line-height: 1.68em;" href="#">与君共勉 →</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</div>
+<script type="text/javascript" src="../../../assets/home/resources/site.js" th:src="@{/assets/home/resources/site.js}"></script>
+</body>
+</html>

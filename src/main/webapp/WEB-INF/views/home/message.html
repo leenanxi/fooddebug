@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>首页 - 留言板</title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <script type="text/javascript" src="../../../assets/home/resources/ga.js"></script>
+    <script type="text/javascript" src="../../../assets/home/resources/common-min.js"></script>
+    <script type="text/javascript" src="../../../assets/home/resources/commerce-min.js"></script>
+    <!--h6IVgr_GD0wTYdaZEk-4ILuRdE2MsquzYc2XibB6k-bfeGv2fFHN4UJLFRbh52jhWD9U5AJUZeIUZQsKw2MujQgqFcjXwcsR5gTuiey8ihyzdem3jAoXS18ySYM0jhNlOYiaikoX-ema-eNCZWgyd1skpAB3SfoRdhXCiey8ihyzdem3jAoXS18ySYM0SaBujW48Sagyjh90jhNlOfG0iey8ihyz-->
+    <script type="text/javascript" src="../../../assets/home/resources/homepage.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../assets/home/resources/commerce-min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/home/resources/site.css" />
+</head>
+
+<body class="collection-type-page view-list mobile-style-available collection-533405dae4b00c9ecf0515ea collection-layout-default transparent-header enable-nav-button nav-button-style-outline nav-button-corner-style-pill banner-button-style-solid banner-button-corner-style-pill banner-slideshow-controls-arrows meta-priority-date hide-entry-author    hide-blog-sidebar   hide-list-entry-footer center-navigation--info  gallery-design-grid aspect-ratio-auto lightbox-style-light gallery-navigation-bullets gallery-info-overlay-show-on-hover gallery-aspect-ratio-32-standard gallery-arrow-style-no-background gallery-transitions-fade gallery-show-arrows gallery-auto-crop   product-list-titles-under product-list-alignment-center product-item-size-11-square product-image-auto-crop product-gallery-size-11-square  show-product-price show-product-item-nav product-social-sharing   event-thumbnails event-thumbnail-size-32-standard event-date-label event-date-label-time event-excerpts event-list-date event-list-time event-list-address event-icalgcal-links      opentable-style-light newsletter-style-light small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square button-style-solid button-corner-style-pill native-currency-code-usd has-banner-image general-page">
+<input type="checkbox" name="mobile-nav-toggle" id="mobileNavToggle" class="mobile-nav-toggle-box hidden" />
+<a href="#" class="body-overlay"></a>
+<div id="sidecarNav">
+    <div id="mobileNavWrapper" class="nav-wrapper">
+        <nav id="mobileNavigation">
+            <div class="collection active homepage"><a href="/index"> 主页 </a>
+            </div>
+            <div class="collection"><a href="/messageBoard"> 留言 </a>
+            </div>
+            <div class="collection" th:if="${#authorization.expression('!isAuthenticated()')}"><a href="/signin" th:href="@{/signin}"> 登录</a></div>
+            <div class="collection" th:if="${#authorization.expression('isAuthenticated()')}"><a href="/logout" th:href="@{/logout}"> 注销</a></div>
+        </nav>
+    </div>
+</div>
+<div id="siteWrapper" class="clearfix">
+    <div class="sqs-cart-dropzone" style="top: 82px;">
+        <div class="yui3-widget sqs-widget sqs-pill-shopping-cart sqs-scalable-hidden" style="visibility: hidden; opacity: 0; -webkit-transform: scale(0.94);">
+            <div class="sqs-pill-shopping-cart-content dark">
+                <div class="icon"></div>
+                <div class="details">
+                    Cart&nbsp;-&nbsp;
+                    <span class="total-quantity">0</span>
+                    <span class="suffix">items</span>
+                </div>
+                    <span class="subtotal">
+  <span class="price"><span class="sqs-money-native">0.00</span></span>
+                    </span>
+            </div>
+        </div>
+    </div>
+    <header id="header" class="show-on-scroll" data-offset-el=".index-section" data-offset-behavior="bottom" role="banner">
+        <div class="header-inner">
+            <div id="siteTitleWrapper" class="wrapper" data-content-field="site-title">
+                <h1 id="siteTitle" class="site-title"><a href="#">The Food <br/>Debug</a></h1>
+            </div>
+            <label for="mobileNavToggle" class="mobile-nav-toggle-label">
+                <div class="top-bar"></div>
+                <div class="middle-bar"></div>
+                <div class="bottom-bar"></div>
+            </label>
+            <label for="mobileNavToggle" class="mobile-nav-toggle-label fixed-nav-toggle-label">
+                <div class="top-bar"></div>
+                <div class="middle-bar"></div>
+                <div class="bottom-bar"></div>
+            </label>
+            <!-- comment the linebreak between these two elements because science -->
+            <div id="headerNav">
+                <div id="mainNavWrapper" class="nav-wrapper">
+                    <nav id="mainNavigation">
+                        <div class="collection active homepage"><a href="/index"> 主页 </a>
+                        </div>
+                        <div class="collection"><a href="/messageBoard"> 留言 </a>
+                        </div>
+                        <div class="collection" th:if="${#authorization.expression('!isAuthenticated()')}"><a href="/signin" th:href="@{/signin}"> 登录</a></div>
+                        <div class="collection" th:if="${#authorization.expression('isAuthenticated()')}"><a href="/logout" th:href="@{/logout}"> 注销</a></div>
+                    </nav>
+                </div>
+                <!-- style below blocks out the mobile nav toggle only when nav is loaded -->
+                <style>
+                    .mobile-nav-toggle-label {
+                        display: inline-block !important;
+                    }
+                </style>
+            </div>
+        </div>
+    </header>
+    <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+    <div class="banner-thumbnail-wrapper has-description" data-content-field="page-settings" id="yui_3_10_1_1_1399736460621_222">
+        <div class="color-overlay"></div>
+        <figure id="thumbnail" class="loading content-fill" style="overflow: hidden;">
+            <img src="../../../assets/home/resources/chambers-10.jpg" data-image-resolution="1500w" style="top: -221px; left: 0px; width: 1519px; height: 1013px; position: relative;" />
+        </figure>
+        <div class="desc-wrapper">
+            <p id="yui_3_10_1_1_1399736460621_204">
+                <strong data-shrink-original-spacing="4" data-shrink-original-size="68" class="data-shrink-ready" style="letter-spacing: 4px;">留言板</strong>
+            </p>
+            <p><em>听君之语, 与君共勉.</em>
+            </p>
+        </div>
+    </div>
+    <main id="page" role="main">
+        <div id="content" class="main-content">
+            <div class="sqs-layout sqs-grid-12 columns-12" data-layout-title="Contribute" data-type="page" data-updated-on="1395977861478" id="page-533405dae4b00c9ecf0515ea">
+                <div class="row sqs-row">
+                    <div class="col sqs-col-12 span-12">
+                        <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-d20dab58c78a6917660f">
+                            <div class="sqs-block-content">
+                                <h1>是否我们习惯了孤独, 习惯了过去就过去吧, 是否我们迷失在内心的黑暗已久, 看不到亮光, 前方终会有出口和希望, 你知道我们迷失在人生路上, 快来拯救我们, 在人生脱轨之前, 为何我们过得如此乏味, 我们如何才能活的精彩, 我们如何才能摆脱束缚, 我们如何才能回归本性, 我们如何才能释放心灵.</h1>
+                            </div>
+                        </div>
+                        <div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" id="block-64c7864e810fdf013089">
+                            <div class="sqs-block-content">
+                                <hr/>
+                            </div>
+                        </div>
+                        <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-ce200350d4a6cbfbc1cd">
+                            <div class="sqs-block-content">
+                                <h2 style="margin-left:0px; margin-right:0px">与君共勉</h2>
+                                <h2>如果你有什么想法或者疑问, 请给我留言, 我们会尽快与您回复.</h2>
+                            </div>
+                        </div>
+                        <div class="sqs-block form-block sqs-block-form" data-block-type="9" id="block-852ea3a293170da495e0">
+                            <div class="sqs-block-content">
+                                <div class="form-wrapper">
+                                    <div class="form-inner-wrapper">
+                                        <form autocomplete="on" action="#" method="POST">
+                                            <div class="field-list clear">
+                                                <fieldset id="name-yui_3_10_1_1_1389902554996_14617" class="form-item fields name">
+                                                    <div class="title"></div>
+                                                    <legend></legend>
+                                                    <div class="field first-name">
+                                                        <label class="caption">
+                                                            <input class="field-element field-control" name="fname" x-autocompletetype="given-name" type="text" spellcheck="false" maxlength="30" data-title="First" />姓名</label>
+                                                    </div>
+                                                    <div class="field last-name">
+                                                        <label class="caption">
+                                                            <input class="field-element field-control" name="lname" x-autocompletetype="surname" type="text" spellcheck="false" maxlength="30" data-title="Last" />昵称</label>
+                                                    </div>
+                                                </fieldset>
+                                                <div id="email-yui_3_10_1_1_1389902554996_14932" class="form-item field email">
+                                                    <label class="title" for="email-yui_3_10_1_1_1389902554996_14932-field"></label>
+                                                    <input class="field-element" name="email" x-autocompletetype="email" type="text" spellcheck="false" id="email-yui_3_10_1_1_1389902554996_14932-field" placeholder="邮箱" />
+                                                </div>
+                                                <div id="textarea-yui_3_10_1_1_1389902554996_15718" class="form-item field textarea">
+                                                    <label class="title" for="textarea-yui_3_10_1_1_1389902554996_15718-field"></label>
+                                                    <textarea class="field-element " id="textarea-yui_3_10_1_1_1389902554996_15718-field" placeholder="留言"></textarea>
+                                                </div>
+                                            </div>
+                                            <input class="button sqs-system-button sqs-editable-button" type="submit" value="Submit" />
+                                            <div class="hidden form-submission-text">
+                                                <p>Thank you!</p>
+                                            </div>
+                                            <div class="hidden form-submission-html" data-submission-html=""></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sqs-block socialaccountlinks-v2-block sqs-block-socialaccountlinks-v2" data-block-type="54" id="block-ae3fe120f081ad7cd06d">
+                            <div class="sqs-block-content">
+                                <nav class="social-account-list social-icon-style-round social-icon-size-default social-icon-alignment-left social-icon-color-black">
+                                    <a href="#" target="new" title="Belle Gibson" class="social-facebook"></a>
+                                    <a href="#" target="new" title="Belle Gibson" class="social-twitter"></a>
+                                    <a href="#" target="new" title="Belle Gibson" class="social-instagram"></a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" src="../../../assets/home/resources/site.js"></script>
+<script type="text/javascript" src="../../../assets/home/resources/site-other.js"></script>
+</body>
+</html>

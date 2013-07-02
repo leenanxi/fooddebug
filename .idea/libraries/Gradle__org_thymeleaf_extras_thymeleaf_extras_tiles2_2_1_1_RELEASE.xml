@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.thymeleaf.extras:thymeleaf-extras-tiles2:2.1.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.thymeleaf.extras/thymeleaf-extras-tiles2/2.1.1.RELEASE/4e1689a2357ef94351f945ba56a695a1d6aafab0/thymeleaf-extras-tiles2-2.1.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.thymeleaf.extras/thymeleaf-extras-tiles2/2.1.1.RELEASE/afb86a0ce3202f4be68593d117f5baf8d680673d/thymeleaf-extras-tiles2-2.1.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
